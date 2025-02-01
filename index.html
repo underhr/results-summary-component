@@ -5,34 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
   
   <title>Frontend Mentor | Results summary component</title>
 </head>
 <body>
+  <div id="container">
+    <div id="resultBlock">
+      Your Result
+        <div id="circle">
+          76
+          of 100
+        </div>
+      Great
+      You scored higher than 65% of the people who have taken these tests.
+    </div>
+    <div id="summaryBlock">
+      Summary
+      <div id="scoreRows">
+        <div class="row">
+          <img src="assets/images/icon-reaction.svg" alt="" aria-disabled="true">
+          Reaction
+          80 / 100
+        </div>
+        <div class="row">
+          <img src="assets/images/icon-reaction.svg" alt="" aria-disabled="true">
+          Memory
+          92 / 100
+        </div>
+        <div class="row">
+          <img src="assets/images/icon-reaction.svg" alt="" aria-disabled="true">
+          Verbal
+          61 / 100
+        </div>
+        <div class="row">
+          <img src="assets/images/icon-reaction.svg" alt="" aria-disabled="true">
+          Visual
+          73 / 100
+        </div>
 
-  Your Result
-  76
-  of 100
+        Memory
+        92 / 100
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+        Verbal
+        61 / 100
 
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-
+        Visual
+        72 / 100
+      </div>
+      <button>Continue</button>
+    </div>
+  </div>
 </body>
 </html>

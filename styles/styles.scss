@@ -1,0 +1,38 @@
+
+@mixin flexCenter() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    margin: 0;
+    border: 1px solid blue;
+}
+body {
+    @include flexCenter;
+    height: 100vh;
+    background-color: #ECF2FF;
+
+    #container {
+        @include flexCenter;
+        border-radius: 32px;
+        background-color: white;
+
+        > div {
+            width: 50%;
+            margin: auto;
+            padding: 40px;
+            box-sizing: border-box;
+            border-radius: 32px;
+        }
+
+        #resultBlock {
+            background-image: linear-gradient(#7755FF, #6943FF, #2F2CE9);
+        }
+
+        #summaryBlock {
+            background-color: white;
+        }
+    }
+}
