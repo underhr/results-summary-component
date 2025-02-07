@@ -1,6 +1,9 @@
+@font-face {
+  font-family: hanken;
+  src: url(../assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
 * {
   margin: 0;
-  border: 1px solid blue;
 }
 
 body {
@@ -9,6 +12,7 @@ body {
   justify-content: center;
   height: 100vh;
   background-color: #ECF2FF;
+  font-family: hanken;
 }
 body #container {
   display: flex;
@@ -16,6 +20,31 @@ body #container {
   justify-content: center;
   border-radius: 32px;
   background-color: white;
+}
+body #container h1 {
+  font-weight: 600;
+  font-size: 72px;
+}
+body #container h2 {
+  font-weight: 500;
+  font-size: 32px;
+}
+body #container h3 {
+  font-weight: 500;
+  font-size: 24px;
+  color: #CAC9FF;
+}
+body #container #of100 {
+  opacity: 51.68%;
+  font-weight: 500;
+  font-size: 18px;
+  color: #CAC9FF;
+}
+body #container p {
+  font-size: 18px;
+  color: #CAC9FF;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 body #container > div {
   width: 50%;
@@ -26,6 +55,21 @@ body #container > div {
 }
 body #container #resultBlock {
   background-image: linear-gradient(#7755FF, #6943FF, #2F2CE9);
+  text-align: center;
+  color: white;
+}
+body #container #resultBlock #circle {
+  background-image: linear-gradient(#4D21C9, rgba(33, 36, 199, 0));
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 body #container #summaryBlock {
   background-color: white;
