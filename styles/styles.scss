@@ -1,6 +1,7 @@
 $gradient1: linear-gradient(#7755FF, #6943FF, #2F2CE9);
 $gradient2: linear-gradient(#4D21C9, rgba(33, 36, 199, 0.0));
 $lightBlue: #CAC9FF;
+$darkNavy: #303B59;
 
 @mixin flexCenter() {
     display: flex;
@@ -20,11 +21,27 @@ body {
     height: 100vh;
     background-color: #ECF2FF;
     font-family: hanken;
+}
 
-    #container {
-        @include flexCenter;
+#container {
+    @include flexCenter;
+    border-radius: 32px;
+    background-color: white;
+    width: 736px;
+
+    > div {
+        width: 50%;
+        margin: auto;
+        padding: 40px;
+        box-sizing: border-box;
         border-radius: 32px;
-        background-color: white;
+        height: 512px;
+    }
+
+    #resultBlock {
+        background-image: $gradient1;
+        text-align:center;
+        color: white;
 
         h1{
             font-weight: 600;
@@ -52,19 +69,6 @@ body {
             margin-bottom: 10px;
         }
 
-        > div {
-            width: 50%;
-            margin: auto;
-            padding: 40px;
-            box-sizing: border-box;
-            border-radius: 32px;
-        }
-
-        #resultBlock {
-            background-image: $gradient1;
-            text-align:center;
-            color: white;
-
             #circle {
                 background-image: $gradient2;
                 height: 200px;
@@ -78,8 +82,103 @@ body {
             }
         }
 
-        #summaryBlock {
-            background-color: white;
+    #summaryBlock {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+
+        h3 {
+            font-weight: 500;
+            font-size: 24px;
+            color: $darkNavy;
+            margin-bottom: 16px;
+        }
+
+        #scoreRows {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .row {
+                height: 56px;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 20px;
+                    margin: 16px;
+                }
+
+                .rowText {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-right: 16px;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                .score {
+                    color: $darkNavy;
+                }
+                .scoreMax {
+                    color: rgba(48, 59, 89, 0.5);
+                }
+            }
+        }
+    }
+}
+
+// text and background color for specific rows
+#reaction {
+    color: #FF5555;
+    background-color: rgba(255, 85, 85, 0.05);
+}
+#memory {
+    color: #FFB21E;
+    background-color: rgba(255, 178, 30, 0.05);
+}
+#verbal {
+    color: #00BB8F;
+    background-color: rgba(0, 187, 143, 0.05);
+}
+#visual {
+    color: #1125D6;
+    background-color: rgba(17, 37, 214, 0.05);
+}
+
+
+//continue button
+button {
+    height: 56px;
+    border-radius: 100px;
+    border: none;
+    background-color: $darkNavy;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 15px;
+
+    &:hover {
+        background-image: $gradient1;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #container {
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+        overflow: scroll;
+
+        > div {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px 0px 32px 32px;
         }
     }
 }
